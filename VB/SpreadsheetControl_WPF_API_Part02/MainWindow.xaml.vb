@@ -1,6 +1,7 @@
 ﻿Imports DevExpress.Spreadsheet
 Imports DevExpress.Xpf.NavBar
 Imports System
+Imports System.Net
 Imports System.Windows
 Imports System.Windows.Input
 
@@ -14,6 +15,7 @@ Namespace SpreadsheetControl_WPF_API_Part02
         Private workbook As IWorkbook
 
         Public Sub New()
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.ServicePointManager.SecurityProtocol Or SecurityProtocolType.Tls12
             InitializeComponent()
             ' Access a workbook.
             workbook = spreadsheetControl1.Document
@@ -36,14 +38,14 @@ Namespace SpreadsheetControl_WPF_API_Part02
         End Sub
         ' ------------------- Load and Save a Document -------------------
         Private Sub LoadDocumentFromFile()
-'            #Region "#LoadDocumentFromFile"
+            '            #Region "#LoadDocumentFromFile"
             ' Load a workbook from a file.
             workbook.LoadDocument("Documents\Document.xlsx", DocumentFormat.OpenXml)
-'            #End Region ' #LoadDocumentFromFile
+            '            #End Region ' #LoadDocumentFromFile
         End Sub
 
         Private Sub SaveDocumentToFile()
-'            #Region "#SaveDocumentToFile"
+            '            #Region "#SaveDocumentToFile"
             ' Save the modified document to a file.
             workbook.SaveDocument("Documents\SavedDocument.xlsx", DocumentFormat.OpenXml)
 '            #End Region ' #SaveDocumentToFile

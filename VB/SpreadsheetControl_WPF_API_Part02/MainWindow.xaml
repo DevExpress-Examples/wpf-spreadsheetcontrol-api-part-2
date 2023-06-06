@@ -16,7 +16,6 @@
             <Setter Property="ItemsSource" Value="{Binding Items}"/>
         </Style>
         <Style TargetType="dxn:NavBarItem">
-            <!--<Setter Property="Content" Value="{Binding}"/>-->
             <Setter Property="Template">
                 <Setter.Value>
                     <DataTemplate>

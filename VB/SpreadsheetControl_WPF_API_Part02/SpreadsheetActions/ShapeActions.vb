@@ -19,8 +19,8 @@ Namespace SpreadsheetControl_WPF_API_Part02
         #End Region
 
         Private Shared Sub InsertShapeValue(ByVal workbook As IWorkbook)
-'            #Region "#insertshape"
-            Dim imageStream As Stream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream("Pictures.chart.png")
+            '            #Region "#insertshape"
+            Dim imageStream As Stream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream("chart.png")
             Dim imageSource As SpreadsheetImageSource = SpreadsheetImageSource.FromStream(imageStream)
             workbook.BeginUpdate()
             ' Set the measurement unit to Millimeter.
@@ -48,8 +48,8 @@ Namespace SpreadsheetControl_WPF_API_Part02
         End Sub
 
         Private Shared Sub InsertShapeFromUriValue(ByVal workbook As IWorkbook)
-'            #Region "#insertshapefromuri"
-            Dim imageUri As String = "http://www.devexpress.com/Products/NET/Document-Server/i/Unit-Conversion.png"
+            '            #Region "#insertshapefromuri"
+            Dim imageUri As String = "https://docs.devexpress.com/WPF/images/spreadsheet-main-page.png"
             ' Create an image from Uri.
             Dim imageSource As SpreadsheetImageSource = SpreadsheetImageSource.FromUri(imageUri, workbook)
             ' Set the measurement unit to point.
@@ -60,7 +60,7 @@ Namespace SpreadsheetControl_WPF_API_Part02
                 Dim worksheet As Worksheet = workbook.Worksheets(0)
                 ' Insert a picture from the SpreadsheetImageSource at 100 pt from the left, 40 pt from the top, 
                 ' and resize it to a width of 200 pt and a height of 180 pt.
-                worksheet.Pictures.AddPicture(imageSource, 100, 40, 200, 180)
+                worksheet.Pictures.AddPicture(imageSource, 100, 40, 400, 300)
             Finally
                 workbook.EndUpdate()
             End Try

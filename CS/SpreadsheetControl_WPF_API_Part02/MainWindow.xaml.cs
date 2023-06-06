@@ -1,6 +1,7 @@
 ﻿using DevExpress.Spreadsheet;
 using DevExpress.Xpf.NavBar;
 using System;
+using System.Net;
 using System.Windows;
 using System.Windows.Input;
 
@@ -15,6 +16,7 @@ namespace SpreadsheetControl_WPF_API_Part02
 
         public MainWindow()
         {
+            System.Net.ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls12;
             InitializeComponent();
             // Access a workbook.
             workbook = spreadsheetControl1.Document;

@@ -51,7 +51,7 @@ namespace SpreadsheetControl_WPF_API_Part02
         static void InsertShapeFromUriValue(IWorkbook workbook)
         {
             #region #insertshapefromuri
-            string imageUri = "http://www.devexpress.com/Products/NET/Document-Server/i/Unit-Conversion.png";
+            string imageUri = "https://docs.devexpress.com/WPF/images/spreadsheet-main-page.png";
             // Create an image from Uri.
             SpreadsheetImageSource imageSource = SpreadsheetImageSource.FromUri(imageUri, workbook);
             // Set the measurement unit to point.
@@ -63,7 +63,7 @@ namespace SpreadsheetControl_WPF_API_Part02
                 Worksheet worksheet = workbook.Worksheets[0];
                 // Insert a picture from the SpreadsheetImageSource at 100 pt from the left, 40 pt from the top, 
                 // and resize it to a width of 200 pt and a height of 180 pt.
-                worksheet.Pictures.AddPicture(imageSource, 100, 40, 200, 180 );
+                worksheet.Pictures.AddPicture(imageSource, 100, 40, 400, 300 );
             }
             finally
             {
@@ -76,7 +76,6 @@ namespace SpreadsheetControl_WPF_API_Part02
 
         static void ModifyShapeValue(IWorkbook workbook)
         {
-
             #region #modifyshape
             // Set the measurement unit to Millimeter.
             workbook.Unit = DevExpress.Office.DocumentUnit.Millimeter;

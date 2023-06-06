@@ -47,3 +47,4 @@ This sample introduces API properties and methods used to perform the following 
 * [Spreadsheet for WPF Examples](https://docs.devexpress.com/WPF/16123/controls-and-libraries/spreadsheet/examples)
 * [Sort Data in Spreadsheet for WPF](https://docs.devexpress.com/WPF/17471/controls-and-libraries/spreadsheet/data-presentation/sorting)
 * [Filter Data in Spreadsheet for WPF](https://docs.devexpress.com/WPF/18162/controls-and-libraries/spreadsheet/data-presentation/filtering)
+* [Spreadsheet Tables](https://docs.devexpress.com/WPF/403316/controls-and-libraries/spreadsheet/spreadsheet-tables)

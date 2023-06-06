@@ -9,7 +9,7 @@ namespace SpreadsheetControl_WPF_API_Part02
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : DevExpress.Xpf.Core.ThemedWindow
     {
         IWorkbook workbook;
 

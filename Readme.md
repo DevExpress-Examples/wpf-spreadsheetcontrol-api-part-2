@@ -39,7 +39,6 @@ This sample introduces API properties and methods used to perform the following 
 ## More Examples
 
 * [WPF SpreadsheetControl API - Part 1](https://github.com/DevExpress-Examples/wpf-spreadsheetcontrol-api-part-1)
-* [WPF SpreadsheetControl API - Part 3](https://github.com/DevExpress-Examples/wpf-spreadsheetcontrol-api-part-3)
 
 ## Documentation
 

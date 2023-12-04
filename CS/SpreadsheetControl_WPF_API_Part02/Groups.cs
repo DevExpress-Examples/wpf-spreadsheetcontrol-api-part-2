@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using SpreadsheetControl_API_Part02;
+using System.Collections.Generic;
 
 namespace SpreadsheetControl_WPF_API_Part02
 {
@@ -19,6 +20,10 @@ namespace SpreadsheetControl_WPF_API_Part02
             examples.Add(new Group("Group Data"));
             examples.Add(new Group("Filter Data"));
             examples.Add(new Group("Document Properties"));
+            examples.Add(new Group("Custom Xml Parts"));
+            examples.Add(new Group("Data Validation"));
+            examples.Add(new Group("Rows and Columns"));
+            examples.Add(new Group("Form Controls"));
 
             #endregion
 
@@ -83,7 +88,28 @@ namespace SpreadsheetControl_WPF_API_Part02
             examples[9].Items.Add(new SpreadsheetExample("Built-in properties", DocumentPropertiesActions.BuiltInPropertiesAction));
             examples[9].Items.Add(new SpreadsheetExample("Custom properties", DocumentPropertiesActions.CustomPropertiesAction));
 
+            // Add nodes to the "Custom Xml" group of examples.
+            examples[10].Items.Add(new SpreadsheetExample("Store Custom XML Parts", CustomXmlPartActions.StoreCustomXmlPartAction));
+            examples[10].Items.Add(new SpreadsheetExample("Obtain Custom XML Parts", CustomXmlPartActions.ObtainCustomXmlPartAction));
+            examples[10].Items.Add(new SpreadsheetExample("Modify Custom XML Parts", CustomXmlPartActions.ModifyCustomXmlPartAction));
 
+            // Add nodes to the "Data Validation" group of examples.
+            examples[11].Items.Add(new SpreadsheetExample("Add Data Validation", DataValidationActions.AddDataValidationAction));
+            examples[11].Items.Add(new SpreadsheetExample("Change Validation Criteria", DataValidationActions.ChangeCriteriaAction));
+            examples[11].Items.Add(new SpreadsheetExample("Get Data Validation", DataValidationActions.GetDataValidationAction));
+            examples[11].Items.Add(new SpreadsheetExample("Remove All Data Validations", DataValidationActions.RemoveAllDataValidationsAction));
+            examples[11].Items.Add(new SpreadsheetExample("Remove Data Validation", DataValidationActions.RemoveDataValidationAction));
+            examples[11].Items.Add(new SpreadsheetExample("Show Error Message", DataValidationActions.ShowErrorMessageAction));
+            examples[11].Items.Add(new SpreadsheetExample("Show Input Message", DataValidationActions.ShowInputMessageAction));
+            examples[11].Items.Add(new SpreadsheetExample("Use Union Range", DataValidationActions.UseUnionRangeAction));
+
+            // Add nodes to the "Rows and Columns" group of examples.
+            examples[12].Items.Add(new SpreadsheetExample("Delete Columns Based On Condition", RowAndColumnActions.DeleteColumnsBasedOnConditionAction));
+            examples[12].Items.Add(new SpreadsheetExample("Delete Rows Based On Condition", RowAndColumnActions.DeleteRowsBasedOnConditionAction));
+
+            // Add nodes to the "Form Controls" group of examples.
+            examples[13].Items.Add(new SpreadsheetExample("Create Form Controls", FormControlActions.CreateFormControlsAction));
+            examples[13].Items.Add(new SpreadsheetExample("Edit Form Controls", FormControlActions.EditFormControlsAction));
             return examples;
             #endregion
         }

@@ -15,6 +15,9 @@ namespace SpreadsheetControl_WPF_API_Part02
         public static Action<IWorkbook> SelectComparerAction = SelectComparerValue;
         public static Action<IWorkbook> SortBySpecifiedColumnAction = SortBySpecifiedColumnValue;
         public static Action<IWorkbook> SortByMultipleColumnsAction = SortByMultipleColumnsValue;
+        public static Action<IWorkbook> SortByFillColorAction = SortByFillColorValue;
+        public static Action<IWorkbook> SortByFontColorAction = SortByFontColorValue;
+
         #endregion
 
         static void SimpleSortValue(IWorkbook workbook)
@@ -138,5 +141,32 @@ namespace SpreadsheetControl_WPF_API_Part02
             // Add a note.
             worksheet["D1"].Value = "Sort by two columns: first and second in ascending order";
         }
+
+        static void SortByFillColorValue(IWorkbook workbook)
+        {
+            #region #SortByFillColor
+            workbook.LoadDocument("Documents\\Sortsample.xlsx");
+            Worksheet worksheet = workbook.Worksheets[0];
+
+            // Sort the "A3:F22" range by column "A" in ascending order.
+            CellRange range = worksheet.Range["A3:F22"];
+            worksheet.Sort(range, 0, worksheet["A3"].Fill);
+
+            #endregion #SortByFillColor
+        }
+
+        static void SortByFontColorValue(IWorkbook workbook)
+        {
+            #region #SortByFontColor
+            workbook.LoadDocument("Documents\\Sortsample.xlsx");
+            Worksheet worksheet = workbook.Worksheets[0];
+
+            // Sort the "A3:F22" range by column "F" in ascending order.
+            CellRange range = worksheet.Range["A3:F22"];
+            worksheet.Sort(range, 5, worksheet["F12"].Font.Color);
+
+            #endregion #SortByFontColor
+        }
+
     }
 }

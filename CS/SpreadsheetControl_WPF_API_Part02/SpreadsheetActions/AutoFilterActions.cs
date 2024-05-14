@@ -19,6 +19,10 @@ namespace SpreadsheetControl_WPF_API_Part02
         public static Action<IWorkbook> FilterMixedDataTypesByValuesAction = FilterMixedDataTypesByValues;
         public static Action<IWorkbook> Top10FilterAction = Top10FilterValue;
         public static Action<IWorkbook> DynamicFilterAction = DynamicFilterValue;
+        public static Action<IWorkbook> FilterAndSortByColorAction = FilterAndSortByColorValue;
+        public static Action<IWorkbook> FilterByBackgroundColorAction = FilterByBackgroundColorValue;
+        public static Action<IWorkbook> FilterByFontColorAction = FilterByFontColorValue;
+        public static Action<IWorkbook> FilterByFillColorAction = FilterByFillColorValue;
         public static Action<IWorkbook> ReapplyFilterAction = ReapplyFilterValue;
         public static Action<IWorkbook> ClearFilterAction = ClearFilter;
         public static Action<IWorkbook> DisableFilterAction = DisableFilter;
@@ -261,6 +265,102 @@ namespace SpreadsheetControl_WPF_API_Part02
             }
             finally { workbook.EndUpdate(); }
         }
+
+        static void FilterAndSortByColorValue(IWorkbook workbook)
+        {
+            workbook.LoadDocument("Documents\\SalesReport.xlsx");
+            workbook.BeginUpdate();
+            try
+            {
+                #region #FilterAndSortByColor
+                Worksheet worksheet = workbook.Worksheets["Regional sales"];
+                workbook.Worksheets.ActiveWorksheet = worksheet;
+
+                // Enable filtering for the "B2:E23" cell range.
+                CellRange range = worksheet["B2:E23"];
+                worksheet.AutoFilter.Apply(range);
+
+                // Sort data in the "B2:E23" range
+                // in descending order by column "D".
+                Color color = worksheet["D12"].Font.Color;
+                worksheet.AutoFilter.SortState.Sort(2, color, false);
+                #endregion #FilterAndSortByColor
+            }
+            finally { workbook.EndUpdate(); }
+
+        }
+
+        static void FilterByBackgroundColorValue(IWorkbook workbook)
+        {
+            workbook.LoadDocument("Documents\\SalesReport.xlsx");
+            workbook.BeginUpdate();
+            try
+            {
+                #region #FilterByBackgroundColor
+                Worksheet worksheet = workbook.Worksheets["Regional sales"];
+                workbook.Worksheets.ActiveWorksheet = worksheet;
+
+                // Enable filtering for the "B2:E23" cell range.
+                CellRange range = worksheet["B2:E23"];
+                worksheet.AutoFilter.Apply(range);
+
+                // Filter values in the "Products" column by background color.
+                AutoFilterColumn products = worksheet.AutoFilter.Columns[1];
+                products.ApplyFillColorFilter(worksheet["C12"].FillColor);
+                #endregion #FilterByBackgroundColor
+            }
+            finally { workbook.EndUpdate(); }
+
+        }
+
+        static void FilterByFillColorValue(IWorkbook workbook)
+        {
+            workbook.LoadDocument("Documents\\SalesReport.xlsx");
+            workbook.BeginUpdate();
+            try
+            {
+                #region #FilterByFillColor
+                Worksheet worksheet = workbook.Worksheets["Regional sales"];
+                workbook.Worksheets.ActiveWorksheet = worksheet;
+
+                // Enable filtering for the "B2:E23" cell range.
+                CellRange range = worksheet["B2:E23"];
+                worksheet.AutoFilter.Apply(range);
+
+                // Filter values in the "Products" column by fill color.
+                AutoFilterColumn products = worksheet.AutoFilter.Columns[1];
+                products.ApplyFillFilter(worksheet["C10"].Fill);
+                #endregion #FilterByFillColor
+            }
+            finally { workbook.EndUpdate(); }
+
+
+        }
+
+        static void FilterByFontColorValue(IWorkbook workbook)
+        {
+            workbook.LoadDocument("Documents\\SalesReport.xlsx");
+            workbook.BeginUpdate();
+            try
+            {
+                #region #FilterByFontColor
+                Worksheet worksheet = workbook.Worksheets["Regional sales"];
+                workbook.Worksheets.ActiveWorksheet = worksheet;
+
+                // Enable filtering for the "B2:E23" cell range.
+                CellRange range = worksheet["B2:E23"];
+                worksheet.AutoFilter.Apply(range);
+
+                // Filter values in the "Sales" column by font color.
+                AutoFilterColumn products = worksheet.AutoFilter.Columns[2];
+                products.ApplyFontColorFilter(worksheet["D10"].Font.Color);
+                #endregion #FilterByFontColor
+            }
+            finally { workbook.EndUpdate(); }
+
+
+        }
+
 
         static void ReapplyFilterValue(IWorkbook workbook)
         {

@@ -56,6 +56,8 @@ namespace SpreadsheetControl_WPF_API_Part02
             examples[5].Items.Add(new SpreadsheetExample("Sort using custom comparer", SortActions.SelectComparerAction));
             examples[5].Items.Add(new SpreadsheetExample("Sort by column", SortActions.SortBySpecifiedColumnAction));
             examples[5].Items.Add(new SpreadsheetExample("Sort by multiple columns", SortActions.SortByMultipleColumnsAction));
+            examples[5].Items.Add(new SpreadsheetExample("Sort by fill", SortActions.SortByFillColorAction));
+            examples[5].Items.Add(new SpreadsheetExample("Sort by font color", SortActions.SortByFontColorAction));
 
             // Add nodes to the "Export" group of examples.
             examples[6].Items.Add(new SpreadsheetExample("Export to HTML", ExportActions.ExportToHTMLAction));
@@ -80,6 +82,10 @@ namespace SpreadsheetControl_WPF_API_Part02
             examples[8].Items.Add(new SpreadsheetExample("Filter mixed data types by values", AutoFilterActions.FilterMixedDataTypesByValuesAction));
             examples[8].Items.Add(new SpreadsheetExample("Apply Top 10 filter", AutoFilterActions.Top10FilterAction));
             examples[8].Items.Add(new SpreadsheetExample("Apply dynamic filter", AutoFilterActions.DynamicFilterAction));
+            examples[8].Items.Add(new SpreadsheetExample("Sort and filter by color", AutoFilterActions.FilterAndSortByColorAction));
+            examples[8].Items.Add(new SpreadsheetExample("Filter by font color", AutoFilterActions.FilterByFontColorAction));
+            examples[8].Items.Add(new SpreadsheetExample("Filter by fill color", AutoFilterActions.FilterByFillColorAction));
+            examples[8].Items.Add(new SpreadsheetExample("Filter by background color", AutoFilterActions.FilterByBackgroundColorAction));
             examples[8].Items.Add(new SpreadsheetExample("Reapply filter", AutoFilterActions.ReapplyFilterAction));
             examples[8].Items.Add(new SpreadsheetExample("Clear filter", AutoFilterActions.ClearFilterAction));
             examples[8].Items.Add(new SpreadsheetExample("Disable filtering", AutoFilterActions.DisableFilterAction));

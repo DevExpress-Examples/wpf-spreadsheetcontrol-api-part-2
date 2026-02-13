@@ -49,7 +49,7 @@ This sample introduces API properties and methods used to perform the following 
 * [Filter Data in Spreadsheet for WPF](https://docs.devexpress.com/WPF/18162/controls-and-libraries/spreadsheet/data-presentation/filtering)
 * [Spreadsheet Tables](https://docs.devexpress.com/WPF/403316/controls-and-libraries/spreadsheet/spreadsheet-tables)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-spreadsheetcontrol-api-part-2&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-spreadsheetcontrol-api-part-2&~~~was_helpful=no)
 

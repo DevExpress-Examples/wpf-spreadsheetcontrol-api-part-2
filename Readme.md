@@ -33,7 +33,7 @@
 <p>- Protect a workbook<br>- Protect a worksheet<br>- Apply user-specific permissions to a range in a protected worksheet<br>- Sort a range in descending and ascending orders<br>- Sort using a custom comparer<br>- Sort by multiple columns<br>- Simple search<br>- Search with options<br>- Export to HTML<br><br></p>
 <p>Starting from v2014 vol.2:</p>
 <p>- Group and outline data<br>- Insert subtotals<br>- Filter the data by a list of values<br>- Apply a number filter<br>- Apply a dynamic filter<br>- Sort the filtered data<br>- Specify the built-in document properties<br>- Specify the custom document properties<br><br>See also:<br><a href="https://www.devexpress.com/Support/Center/p/E4938">WPF SpreadsheetControl API - Part 1</a></p>
-<a href="https://github.com/DevExpress-Examples/wpf-spreadsheetcontrol-api-part-3-t289419">WPF SpreadsheetControl API - Part 3</a></p>
+</p>
 <br/>
 
 

@@ -1,7 +1,6 @@
 ﻿Imports DevExpress.Spreadsheet
 Imports DevExpress.Xpf.NavBar
 Imports System
-Imports System.Net
 Imports System.Windows
 Imports System.Windows.Input
 
@@ -15,13 +14,11 @@ Namespace SpreadsheetControl_WPF_API_Part02
         Private workbook As IWorkbook
 
         Public Sub New()
-            System.Net.ServicePointManager.SecurityProtocol = System.Net.ServicePointManager.SecurityProtocol Or SecurityProtocolType.Tls12
             InitializeComponent()
             ' Access a workbook.
             workbook = spreadsheetControl1.Document
 
             DataContext = Groups.InitData()
-
         End Sub
 
         Private Sub NavigationPaneView_MouseDoubleClick(ByVal sender As Object, ByVal e As MouseButtonEventArgs)
